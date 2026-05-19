@@ -1,0 +1,65 @@
+name: Build
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: zmkfirmware/zmk-build-arm:stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache west modules
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-zephyr-modules
+        with:
+          path: |
+            modules/
+            tools/
+            zephyr/
+            bootloader/
+            zmk/
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('config/west.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+
+      - name: West Init
+        run: west init -l config
+      - name: West Update
+        run: west update
+      - name: West Zephyr export
+        run: west zephyr-export
+
+      # 1. k_grid18 Left (分割型・左)
+      - name: Build Left
+        run: |
+          west build -s zmk/app -b xiao_ble -- -DSHIELD=k_grid18_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          cp build/zephyr/zmk.uf2 k_grid18_left.uf2
+
+      # 2. k_grid18 Right (分割型・右)
+      - name: Build Right
+        run: |
+          rm -rf build
+          west build -s zmk/app -b xiao_ble -- -DSHIELD=k_grid18_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          cp build/zephyr/zmk.uf2 k_grid18_right.uf2
+
+      # 3. Settings Reset (Bluetooth情報リセット用)
+      - name: Build Settings Reset
+        run: |
+          rm -rf build
+          west build -s zmk/app -b xiao_ble -- -DSHIELD=settings_reset -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          cp build/zephyr/zmk.uf2 settings_reset.uf2
+
+      # 成果物をアップロード
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: kgrid18_firmware
+          path: |
+            k_grid18_left.uf2
+            k_grid18_right.uf2
+            settings_reset.uf2

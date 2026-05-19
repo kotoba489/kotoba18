@@ -1,0 +1,29 @@
+if SHIELD_K_GRID18_LEFT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_K_GRID18_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif
+
+if SHIELD_K_GRID18_LEFT || SHIELD_K_GRID18_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "kgrid18"
+
+config ZMK_SPLIT
+    default y
+
+config BT
+    default y
+
+config ZMK_BLE
+    default y
+
+endif
