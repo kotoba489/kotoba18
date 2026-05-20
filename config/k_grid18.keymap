@@ -24,10 +24,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q    &kp W  &kp E           &kp R     &kp T     &kp Y      &kp U      &kp I      &kp O    &kp P
-&lt 2 A  &kp S  &kp D           &kp F     &kp G     &kp H      &kp J      &kp K      &kp L    &kp SLASH
-&lt 1 Z  &kp X  &kp C           &kp V     &kp B     &kp N      &kp M      &kp COMMA  &kp DOT  &kp MINUS
-                &kp LEFT_SHIFT  &kp LALT  &kp LGUI  &kp SPACE  &kp ENTER  &kp LCTRL
+&kp Q    &kp W    &kp E           &kp R      &kp T     &kp Y      &kp U      &kp I      &kp O    &kp P
+&kp A    &kp S    &kp D           &kp F      &kp G     &kp H      &kp J      &kp K      &kp L    &kp SLASH
+&lt 1 Z  &lt 2 X  &kp C           &kp V      &kp B     &kp N      &kp M      &kp COMMA  &kp DOT  &kp MINUS
+                  &kp LEFT_SHIFT  &kp LA(D)  &kp LGUI  &kp SPACE  &kp ENTER  &kp LCTRL
             >;
         };
 
@@ -43,10 +43,10 @@
 
         layer_2 {
             bindings = <
-&none  &bt BT_CLR_ALL  &none          &none          &none          &none           &none  &none           &none           &none
-&none  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &msc SCRL_UP    &none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK
-&none  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &msc SCRL_DOWN  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
-                       &none          &none          &none          &none           &none  &none
+&none  &bt BT_CLR_ALL  &none         &none         &none         &none           &none  &none           &none           &none
+&none  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &msc SCRL_UP    &none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK
+&none  &none           &none         &none         &none         &msc SCRL_DOWN  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+                       &none         &none         &none         &none           &none  &none
             >;
         };
     };
