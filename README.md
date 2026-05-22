@@ -97,5 +97,11 @@ CONFIG_ZMK_POINTING=y
 
 ---
 
+
+## ZMK Studio 対応
+ZMK v0.3 固定・physical-layout 定義済み。Studio からキーマップをリアルタイム編集できます。
+
+---
+
 ## MIT License
 This project is licensed under the MIT License.
