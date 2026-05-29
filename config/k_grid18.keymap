@@ -16,6 +16,11 @@
             bindings = <&kp LC(SPACE)>;
             key-positions = <32 31>;
         };
+
+        ss {
+            bindings = <&kp LS(LG(NUMBER_4))>;
+            key-positions = <3 4>;
+        };
     };
 
     keymap {
