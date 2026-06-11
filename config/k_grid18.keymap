@@ -21,6 +21,11 @@
             bindings = <&kp LS(LG(NUMBER_4))>;
             key-positions = <3 4>;
         };
+
+        c+a {
+            bindings = <&kp LC(A)>;
+            key-positions = <5 6>;
+        };
     };
 
     keymap {
