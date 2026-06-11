@@ -103,5 +103,22 @@ ZMK v0.3 固定・physical-layout 定義済み。Studio からキーマップを
 
 ---
 
+## Bluetooth再接続の安定化
+
+電源OFF/ON後もBluetoothのペアリング情報（bond/profile）を保持できるように、ZMKのSettings/NVS保存設定を追加しています。  
+これにより、MacやWindowsで一度ペアリングした後、毎回デバイス削除や再ペアリングをしなくても再接続しやすくなります。
+
+あわせて、`settings_reset.uf2` でも保存領域を正しく初期化できるように `config/settings_reset.conf` を追加しています。  
+接続が不安定な場合は、PC/Mac側の古いペアリングを削除し、`settings_reset.uf2` → 通常ファームウェア → 新規ペアリングの順でやり直してください。
+
+---
+
+## 分割キーボードのポインティング機能
+
+レイヤー内のマウス移動・クリック・スクロールを確実に有効化するため、共通設定に加えて左右それぞれの `.conf` にも `CONFIG_ZMK_POINTING=y` を明示しています。  
+分割構成でポインティング操作が効かない場合は、`*_left.conf` / `*_right.conf` の両方にこの設定が入っているか確認してください。
+
+---
+
 ## MIT License
 This project is licensed under the MIT License.
