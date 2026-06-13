@@ -112,6 +112,8 @@ PC/Mac/Windows向けのGATT互換設定やCentral側バッテリーproxy/fetchin
 
 長時間のdeep sleepから復帰できないことがあったため、ファームウェア側のsleepは無効化しています。30分以上使わない場合は、電源スイッチでOFFにする運用を推奨します。
 
+`experiment/sleep-2h` ブランチでは、実験用に2時間後sleepへ入る設定を試しています。
+
 あわせて、`settings_reset.uf2` でも保存領域を正しく初期化できるように `config/settings_reset.conf` を追加しています。  
 接続が不安定な場合は、PC/Mac側の古いペアリングを削除し、`settings_reset.uf2` → 通常ファームウェア → 新規ペアリングの順でやり直してください。
 
