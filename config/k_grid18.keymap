@@ -53,9 +53,9 @@
 
         layer_2 {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_DISC 0  &bt BT_DISC 1   &msc SCRL_UP    &none  &mkp RCLK        &mmv MOVE_UP    &mkp LCLK
-&none       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_DISC 2  &bt BT_DISC 3   &msc SCRL_DOWN  &none  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
-&none       &none         &none         &none          &bt BT_CLR_ALL  &none           &none  &none            &none           &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_DISC 0  &bt BT_DISC 1   &msc SCRL_UP    &none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK
+&none       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_DISC 2  &bt BT_DISC 3   &msc SCRL_DOWN  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+&none       &none         &none         &none          &bt BT_CLR_ALL  &none           &none  &none           &none           &none
                           &none         &none          &none           &none           &none  &none
             >;
         };
