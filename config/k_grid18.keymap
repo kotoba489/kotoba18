@@ -44,18 +44,18 @@
         layer_1 {
             display-name = "Edit";
             bindings = <
-&kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LBKT        &kp RBKT     &kp ESC        &kp TAB    &kp N7     &kp N8     &kp N9  &kp N0
-&none                 &none                  &kp LPAR        &kp RPAR     &kp SLASH      &kp EQUAL  &kp N4     &kp N5     &kp N6  &kp AT
-&none                 &none                  &none           &kp PERCENT  &kp LC(SPACE)  &kp MINUS  &kp N1     &kp N2     &kp N3  &kp PERIOD
-                                             &kp LEFT_SHIFT  &kp LC(D)    &kp LGUI       &kp SPACE  &kp ENTER  &kp LCTRL
+&kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LBKT  &kp RBKT     &kp ESC        &kp TAB    &kp N7  &kp N8     &kp N9  &kp N0
+&none                 &none                  &kp LPAR  &kp RPAR     &kp SLASH      &kp EQUAL  &kp N4  &kp N5     &kp N6  &kp AT
+&kp LEFT_SHIFT        &none                  &none     &kp PERCENT  &kp LC(SPACE)  &kp MINUS  &kp N1  &kp N2     &kp N3  &kp PERIOD
+                                             &none     &none        &none          &none      &none   &kp LCTRL
             >;
         };
 
         layer_2 {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_DISC 0  &bt BT_DISC 1   &none           &none  &none           &none           &none
-&none       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_DISC 2  &bt BT_DISC 3   &msc SCRL_UP    &none  &mkp RCLK       &mmv MOVE_UP    &mkp LCLK
-&none       &none         &none         &none          &bt BT_CLR_ALL  &msc SCRL_DOWN  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_DISC 0  &bt BT_DISC 1   &msc SCRL_UP    &none  &mkp RCLK        &mmv MOVE_UP    &mkp LCLK
+&none       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_DISC 2  &bt BT_DISC 3   &msc SCRL_DOWN  &none  &mmv MOVE_RIGHT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+&none       &none         &none         &none          &bt BT_CLR_ALL  &none           &none  &none            &none           &none
                           &none         &none          &none           &none           &none  &none
             >;
         };
