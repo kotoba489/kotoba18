@@ -13,18 +13,8 @@
         };
 
         kanaE {
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LG(SPACE)>;
             key-positions = <32 31>;
-        };
-
-        ss {
-            bindings = <&kp LS(LG(NUMBER_4))>;
-            key-positions = <3 4>;
-        };
-
-        c+a {
-            bindings = <&kp LC(A)>;
-            key-positions = <5 6>;
         };
     };
 
@@ -34,10 +24,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q           &kp D  &kp E      &kp U        &kp COMMA    &kp H      &kp S      &kp Y                    &kp R  &kp B
-&kp Z           &kp J  &kp I      &kp A        &kp O        &kp K      &kp N      &kp T                    &kp W  &kp P
-&kp LEFT_SHIFT  &kp X  &kp C      &kp V        &kp DOT      &kp G      &kp M      &kp F                    &kp L  &kp MINUS
-                       &kp LCTRL  &lt 2 LC(D)  &lt 1 SPACE  &kp SPACE  &kp ENTER  &mt RIGHT_ALT BACKSPACE
+&kp Q           &kp D  &kp E      &kp U        &kp COMMA    &kp H      &kp S      &kp Y          &kp R  &kp B
+&kp Z           &kp J  &kp I      &kp A        &kp O        &kp K      &kp N      &kp T          &kp W  &kp P
+&kp LEFT_SHIFT  &kp X  &kp C      &kp V        &kp DOT      &kp G      &kp M      &kp F          &kp L  &kp MINUS
+                       &kp LCTRL  &lt 2 LC(D)  &lt 1 SPACE  &kp SPACE  &kp ENTER  &kp BACKSPACE
             >;
         };
 
