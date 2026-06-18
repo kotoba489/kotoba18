@@ -39,10 +39,10 @@
         layer_1 {
             display-name = "Edit";
             bindings = <
-&kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LBKT  &kp RBKT     &kp ESC        &kp TAB    &kp N7  &kp N8     &kp N9  &kp N0
-&none                 &none                  &kp LPAR  &kp RPAR     &kp SLASH      &kp EQUAL  &kp N4  &kp N5     &kp N6  &kp AT
-&kp LEFT_SHIFT        &none                  &none     &kp PERCENT  &kp LG(SPACE)  &kp MINUS  &kp N1  &kp N2     &kp N3  &none
-                                             &none     &none        &none          &none      &none   &kp LCTRL
+&kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LBKT  &kp RBKT     &kp ESC             &kp TAB    &kp N7  &kp N8     &kp N9  &kp N0
+&none                 &none                  &kp LPAR  &kp RPAR     &kp SLASH           &kp EQUAL  &kp N4  &kp N5     &kp N6  &kp AT
+&kp LEFT_SHIFT        &none                  &none     &kp PERCENT  &kp LC(LEFT_SHIFT)  &kp MINUS  &kp N1  &kp N2     &kp N3  &none
+                                             &none     &none        &none               &none      &none   &kp LCTRL
             >;
         };
 
