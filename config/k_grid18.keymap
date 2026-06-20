@@ -29,10 +29,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q  &kp D  &kp E           &kp U               &kp COMMA  &kp H      &kp S      &kp Y                &kp R  &kp B
-&kp Z  &kp J  &kp I           &kp A               &kp O      &kp K      &kp N      &kp T                &kp W  &kp P
-&mo 2  &kp X  &kp C           &kp V               &kp DOT    &kp G      &kp M      &kp F                &kp L  &kp MINUS
-              &kp LEFT_SHIFT  &kp LC(LEFT_SHIFT)  &mo 1      &kp SPACE  &kp ENTER  &mt LCTRL BACKSPACE
+&kp Q    &kp D  &kp E           &kp U               &kp COMMA  &kp H      &kp S      &kp Y                &kp R  &kp B
+&lt 3 Z  &kp J  &kp I           &kp A               &kp O      &kp K      &kp N      &kp T                &kp W  &kp P
+&mo 2    &kp X  &kp C           &kp V               &kp DOT    &kp G      &kp M      &kp F                &kp L  &kp MINUS
+                &kp LEFT_SHIFT  &kp LC(LEFT_SHIFT)  &mo 1      &kp SPACE  &kp ENTER  &mt LCTRL BACKSPACE
             >;
         };
 
@@ -52,6 +52,15 @@
 &none       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_DISC 2  &bt BT_DISC 3   &msc SCRL_DOWN  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT
 &none       &none         &none         &none          &bt BT_CLR_ALL  &none           &none  &none           &none           &none
                           &none         &none          &none           &none           &none  &none
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans          &kp UP_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans       &trans  &trans  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW
+&trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans          &trans        &trans
+                &trans  &trans  &trans       &trans  &trans  &trans
             >;
         };
     };
