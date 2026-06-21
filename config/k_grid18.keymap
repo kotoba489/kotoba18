@@ -29,29 +29,29 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q           &kp L  &kp E  &kp U  &kp COMMA       &kp H      &kp S      &kp T                &kp Y  &kp B
-&kp Z           &kp J  &kp I  &kp A  &kp O           &kp K      &kp N      &kp D                &kp R  &kp P
-&kp LEFT_SHIFT  &kp X  &kp C  &kp V  &kp DOT         &kp G      &kp M      &kp F                &kp W  &kp MINUS
-                       &mo 2  &mo 1  &kp LC(LSHIFT)  &kp SPACE  &kp ENTER  &mt LCTRL BACKSPACE
+&kp Q  &kp L  &kp E           &kp U  &kp COMMA       &kp H      &kp S      &kp T                &kp Y  &kp B
+&kp Z  &kp J  &kp I           &kp A  &kp O           &kp K      &kp N      &kp D                &kp R  &kp P
+&mo 2  &kp X  &kp C           &kp V  &kp DOT         &kp G      &kp M      &kp MINUS            &kp W  &kp F
+              &kp LEFT_SHIFT  &mo 1  &kp LC(LSHIFT)  &kp SPACE  &kp ENTER  &mt LCTRL BACKSPACE
             >;
         };
 
         layer_1 {
             display-name = "Edit";
             bindings = <
-&kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LBKT  &kp RBKT     &kp ESC             &kp TAB    &kp N7  &kp N8     &kp N9  &kp N0
+&kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp LBKT  &kp RBKT     &kp ESC             &kp AT     &kp N7  &kp N8     &kp N9  &kp N0
 &kp F7                &kp F10                &kp LPAR  &kp RPAR     &kp SLASH           &kp EQUAL  &kp N4  &kp N5     &kp N6  &kp AT
-&kp LEFT_SHIFT        &none                  &none     &kp PERCENT  &kp LC(LEFT_SHIFT)  &kp N0     &kp N1  &kp N2     &kp N3  &none
+&kp LEFT_SHIFT        &none                  &none     &kp PERCENT  &kp LC(LEFT_SHIFT)  &kp N0     &kp N1  &kp N2     &kp N3  &kp TAB
                                              &none     &none        &none               &none      &none   &kp LCTRL
             >;
         };
 
         layer_2 {
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_DISC 0  &bt BT_DISC 1   &msc SCRL_UP    &none         &mkp RCLK        &mmv MOVE_UP    &mkp LCLK
-&none        &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_DISC 2  &bt BT_DISC 3   &msc SCRL_DOWN  &kp UP_ARROW  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT
-&bootloader  &none         &none         &none          &bt BT_CLR_ALL  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none           &none
-                           &none         &none          &none           &none           &none         &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &none  &bootloader     &msc SCRL_UP    &none         &mkp RCLK        &mmv MOVE_UP    &mkp LCLK
+&none       &bt BT_SEL 2  &none         &none  &bt BT_CLR_ALL  &msc SCRL_DOWN  &kp UP_ARROW  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT
+&none       &bootloader   &none         &none  &none           &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none           &none
+                          &none         &none  &none           &none           &none         &none
             >;
         };
     };
