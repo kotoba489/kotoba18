@@ -59,7 +59,7 @@ map = <
 左手を「親」、右手を「子」として明確に役割分担させる設定を導入。これによりBluetoothの認識率が大幅に向上しました。
 
 ---
-###　Bluetooth 再接続安定化設定 (`k_grid18.conf`)
+### Bluetooth 再接続安定化設定 (`k_grid18.conf`)
 Mac や Mobile 端末との自動接続安定化およびポインティング（pointing）機能有効化設定です。
 
 ```properties
