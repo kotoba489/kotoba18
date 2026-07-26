@@ -59,7 +59,21 @@ map = <
 左手を「親」、右手を「子」として明確に役割分担させる設定を導入。これによりBluetoothの認識率が大幅に向上しました。
 
 ---
+###　Bluetooth 再接続安定化設定 (`k_grid18.conf`)
+Mac や Mobile 端末との自動接続安定化およびポインティング（pointing）機能有効化設定です。
 
+```properties
+CONFIG_ZMK_KEYBOARD_NAME="kgrid18"
+CONFIG_ZMK_SPLIT=y
+CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
+CONFIG_ZMK_BLE=y
+CONFIG_ZMK_USB=y
+CONFIG_ZMK_BATTERY_REPORTING=y
+CONFIG_BT_BAS=y
+CONFIG_ZMK_POINTING=y
+CONFIG_ZMK_STUDIO=y
+CONFIG_ZMK_STUDIO_LOCKING=n
+CONFIG_ZMK_SLEEP=n
 ## 4. 今後のキーマップ変更の流れ
 基本的に**左手（親機）の設定を書き換えるだけ**で、左右両方のキー配置を更新可能です。
 
