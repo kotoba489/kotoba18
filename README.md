@@ -73,7 +73,8 @@ CONFIG_BT_BAS=y
 CONFIG_ZMK_POINTING=y
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_STUDIO_LOCKING=n
-CONFIG_ZMK_SLEEP=n
+CONFIG_ZMK_SLEEP=n  
+
 ## 4. 今後のキーマップ変更の流れ
 基本的に**左手（親機）の設定を書き換えるだけ**で、左右両方のキー配置を更新可能です。
 
