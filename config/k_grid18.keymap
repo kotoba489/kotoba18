@@ -31,7 +31,7 @@
             bindings = <
 &kp Q  &kp L  &kp E           &kp U  &kp COMMA       &kp H      &kp T      &kp S                &kp Y  &kp B
 &kp Z  &kp J  &kp I           &kp A  &kp O           &kp K      &kp N      &kp R                &kp D  &kp P
-&mo 2  &kp X  &kp C           &kp V  &kp DOT         &kp G      &kp M      &kp MINUS            &kp W  &kp F
+&mo 2  &kp X  &kp C           &kp V  &kp DOT         &kp G      &kp M      &kp MINUS            &kp W  &kp Z
               &kp LEFT_SHIFT  &mo 1  &kp LC(LSHIFT)  &kp SPACE  &kp ENTER  &mt LCTRL BACKSPACE
             >;
         };
