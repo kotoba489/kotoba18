@@ -37,21 +37,21 @@ jobs:
       # 1. k_grid18 Left (分割型・左)
       - name: Build Left
         run: |
-          west build -s zmk/app -b xiao_ble/nrf52840/zmk -- -DSHIELD=k_grid18_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          west build -s zmk/app -b xiao_ble -- -DSHIELD=k_grid18_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
           cp build/zephyr/zmk.uf2 k_grid18_left.uf2
 
       # 2. k_grid18 Right (分割型・右)
       - name: Build Right
         run: |
           rm -rf build
-          west build -s zmk/app -b xiao_ble/nrf52840/zmk -- -DSHIELD=k_grid18_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          west build -s zmk/app -b xiao_ble -- -DSHIELD=k_grid18_right -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
           cp build/zephyr/zmk.uf2 k_grid18_right.uf2
 
       # 3. Settings Reset (Bluetooth情報リセット用)
       - name: Build Settings Reset
         run: |
           rm -rf build
-          west build -s zmk/app -b xiao_ble/nrf52840/zmk -- -DSHIELD=settings_reset -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          west build -s zmk/app -b xiao_ble -- -DSHIELD=settings_reset -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
           cp build/zephyr/zmk.uf2 settings_reset.uf2
 
       # 成果物をアップロード
