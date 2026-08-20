@@ -37,7 +37,7 @@ jobs:
       # 1. k_grid18 Left (分割型・左)
       - name: Build Left
         run: |
-          west build -s zmk/app -b xiao_ble//zmk -S studio-rpc-usb-uart -- -DSHIELD=k_grid18_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+          west build -s zmk/app -b xiao_ble//zmk -- -DSHIELD=k_grid18_left -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
           cp build/zephyr/zmk.uf2 k_grid18_left.uf2
 
       # 2. k_grid18 Right (分割型・右)
