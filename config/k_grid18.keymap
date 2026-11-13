@@ -26,6 +26,11 @@
             bindings = <&kp LS(LG(S))>;
             key-positions = <5 6>;
         };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <34 35>;
+        };
     };
 
     keymap {
@@ -34,20 +39,20 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q           &kp L  &kp E  &kp U     &kp COMMA         &kp H           &kp T      &kp S          &kp Y      &kp B
-&kp Z           &kp J  &kp I  &kp A     &kp O             &kp K           &kp N      &kp R          &kp D      &kp P
-&kp LEFT_SHIFT  &kp X  &kp C  &kp V     &mt LCTRL PERIOD  &mt LEFT_ALT G  &kp M      &kp W          &kp MINUS  &kp F
-                       &mo 1  &kp LGUI  &kp LC(LSHIFT)    &kp SPACE       &kp ENTER  &kp BACKSPACE
+&kp Q           &kp L  &kp E  &kp U     &kp COMMA         &kp H           &kp T          &kp S          &kp Y      &kp B
+&kp Z           &kp J  &kp I  &kp A     &kp O             &kp K           &kp N          &kp R          &kp D      &kp P
+&kp LEFT_SHIFT  &kp X  &kp C  &kp V     &mt LCTRL PERIOD  &mt LEFT_ALT G  &kp M          &kp W          &kp MINUS  &kp F
+                       &mo 1  &kp LGUI  &kp LA(D)         &kp SPACE       &kp LS(ENTER)  &kp BACKSPACE
             >;
         };
 
         layer_1 {
             display-name = "Edit";
             bindings = <
-&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_CLR_ALL         &kp HASH        &kp AT        &kp N7          &kp N8          &kp N9  &msc SCRL_UP
-&kp F7          &kp F10       &kp LBKT              &kp RIGHT_BRACKET      &kp LS(LBKT)    &kp LS(RBKT)  &kp N4          &kp N5          &kp N6  &msc SCRL_DOWN
-&kp LEFT_SHIFT  &none         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &kp NUMBER_0  &kp N1          &kp N2          &kp N3  &mkp LCLK
-                              &none                 &none                  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_LEFT
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_CLR_ALL         &kp HASH        &kp AT           &kp N7    &kp N8  &kp N9  &kp LEFT_ARROW
+&kp F7          &kp F10       &kp LBKT              &kp RIGHT_BRACKET      &kp LS(SLASH)   &kp LS(EQUAL)    &kp N4    &kp N5  &kp N6  &kp RIGHT
+&kp LEFT_SHIFT  &none         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mmv MOVE_UP    &kp NUMBER_0     &kp N1    &kp N2  &kp N3  &none
+                              &none                 &mmv MOVE_LEFT         &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB1  &none
             >;
         };
     };
